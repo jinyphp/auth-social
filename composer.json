@@ -20,6 +20,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "livewire/livewire": "^2.10",
+
         "laravel/socialite": "^5.5",
         "socialiteproviders/kakao": "^4.2",
         "socialiteproviders/naver": "^4.1"
