@@ -38,8 +38,8 @@ class JinySocialServiceProvider extends ServiceProvider
     {
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
-       
-            Livewire::component('WireSocial-Login', \Modules\Social\Http\Livewire\WireSocialLogin::class);
+
+            Livewire::component('WireSocial-Login', \Jiny\Social\Http\Livewire\WireSocialLogin::class);
 
         });
 

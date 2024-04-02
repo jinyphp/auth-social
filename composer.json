@@ -1,10 +1,9 @@
 {
     "name": "jiny/social",
-    "description": "jiny social auth for JinyPHP",
+    "description": "social auth for JinyPHP",
     "keywords": [
-        "jinyPHP",
-        "framwork",
-        "social"
+        "Laravel", "jinyPHP", "framwork", 
+        "auth", "social"
     ],
     "homepage": "http://www.jinyphp.com",
     "type": "library",
@@ -18,8 +17,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.3|^8.0",
-        "livewire/livewire": "^2.10",
+        "php": "^8.1",
+        "livewire/livewire": "^3.0",
 
         "laravel/socialite": "^5.5",
         "socialiteproviders/kakao": "^4.2",
