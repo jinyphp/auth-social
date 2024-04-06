@@ -33,9 +33,10 @@ class WireSocialLogin extends Component
                     if($item['enable']) {
                         $providers []= $key;
                     }
-                } else {
-                    $providers []= $key;
                 }
+                // else {
+                //     $providers []= $key;
+                // }
             }
         }
 
