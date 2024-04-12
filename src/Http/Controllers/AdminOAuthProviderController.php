@@ -11,9 +11,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
-
-use Jiny\WireTable\Http\Controllers\LiveController;
-class AdminOAuthProviderController extends LiveController
+use Jiny\Admin\Http\Controllers\AdminController;
+class AdminOAuthProviderController extends AdminController
 {
     //const MENU_PATH = "menus";
     public function __construct()
