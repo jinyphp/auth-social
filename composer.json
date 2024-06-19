@@ -1,5 +1,5 @@
 {
-    "name": "jiny/social",
+    "name": "jiny/auth-social",
     "description": "social auth for JinyPHP",
     "keywords": [
         "Laravel", "jinyPHP", "framwork",
@@ -17,7 +17,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "laravel/socialite": "^5.5",
         "socialiteproviders/kakao": "^4.2",
         "socialiteproviders/naver": "^4.1"
