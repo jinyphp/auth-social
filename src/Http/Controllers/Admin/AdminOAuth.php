@@ -1,6 +1,5 @@
 <?php
-
-namespace Jiny\Social\Http\Controllers;
+namespace Jiny\Social\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
 use Jiny\Admin\Http\Controllers\AdminController;
-class AdminOAuthController extends AdminController
+class AdminOAuth extends AdminController
 {
     //const MENU_PATH = "menus
 
@@ -22,7 +21,7 @@ class AdminOAuthController extends AdminController
         $this->setVisit($this);
 
         ##
-        $this->actions['table'] = "user_oauth"; // 테이블 정보
+        $this->actions['table']['name'] = "user_oauth"; // 테이블 정보
         $this->actions['paging'] = 10; // 페이지 기본값
 
         $this->actions['view']['list'] = "jiny-social::admin.oauth.list";

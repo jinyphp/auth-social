@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('enable')->nullable();
             $table->string('name')->nullable();
 
+            $table->string('provider')->nullable();
             $table->string('client_id')->nullable();
             $table->string('client_secret')->nullable();
 
@@ -29,6 +30,8 @@ return new class extends Migration
 
             $table->string('icon')->nullable();
             $table->string('color')->nullable();
+
+            $table->integer('users')->default(0);
 
         });
     }

@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string('avatar')->nullable();
 
             $table->string('status')->nullable();
+
+            $table->integer('cnt')->default(0);
         });
     }
 

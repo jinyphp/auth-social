@@ -2,6 +2,7 @@
     <x-wire-thead>
         {{-- 테이블 제목 --}}
         <th width='200'>provider</th>
+        <th width='200'>user_id</th>
         <th>이메일</th>
         <th>oauth_id</th>
         <th width='200'>등록일자</th>
@@ -15,7 +16,10 @@
                     {{$item->provider}}
                 </td>
                 <td>
-                    {!! $popupEdit($item, $item->email) !!}
+                    {{$item->user_id}}
+                </td>
+                <td>
+                    {{$item->email}}
                 </td>
                 <td>
                     {{$item->oauth_id}}

@@ -12,20 +12,38 @@
             <x-form-hor>
                 <x-form-label>활성화</x-form-label>
                 <x-form-item>
-                    {!! xCheckbox()
-                        ->setWire('model.defer',"forms.enable")
-                    !!}
+                    <input type="checkbox" class="form-check-input"
+                        wire:model="forms.enable"
+                        {{ isset($forms['enable']) && $forms['enable'] ? 'checked' : '' }}>
                 </x-form-item>
             </x-form-hor>
 
 
             <x-form-hor>
-                <x-form-label>provider code</x-form-label>
+                <x-form-label>타이틀</x-form-label>
                 <x-form-item>
                     {!! xInputText()
                         ->setWire('model.defer',"forms.name")
                         ->setWidth("standard")
                     !!}
+
+                </x-form-item>
+            </x-form-hor>
+
+            <x-form-hor>
+                <x-form-label>Provider</x-form-label>
+                <x-form-item>
+
+                    <select class="form-select" wire:model="forms.provider">
+                        <option value="">선택</option>
+                        <option value="google">google</option>
+                        <option value="facebook">facebook</option>
+                        <option value="naver">naver</option>
+                        <option value="kakao">kakao</option>
+                        <option value="apple">apple</option>
+                        <option value="github">github</option>
+
+                    </select>
                 </x-form-item>
             </x-form-hor>
 
