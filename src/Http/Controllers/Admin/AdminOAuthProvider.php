@@ -21,6 +21,8 @@ class AdminOAuthProvider extends AdminController
         $this->actions['table']['name'] = "user_oauth_providers"; // 테이블 정보
         $this->actions['paging'] = 10; // 페이지 기본값
 
+        $this->actions['view']['table'] = "jiny-social::admin.provider.table";
+
         $this->actions['view']['list'] = "jiny-social::admin.provider.list";
         $this->actions['view']['form'] = "jiny-social::admin.provider.form";
 

@@ -1,5 +1,5 @@
 @php
-    $total_users = user_count();;
+    $total_users = user_count();
 @endphp
 <x-wire-table>
     <x-wire-thead>
@@ -38,14 +38,17 @@
                     </td>
                     <td class="d-none d-xl-table-cell">
                         @php
-                            $percent = $item->users / $total_users * 100;
-                            $percent = round($percent, 2);
+                            if ($item->users > 0 && $total_users > 0) {
+                                $percent = ($item->users / $total_users) * 100;
+                                $percent = round($percent, 2);
+                            } else {
+                                $percent = 0;
+                            }
                         @endphp
                         <div class="progress">
-                            <div class="progress-bar bg-primary"
-                                role="progressbar" style="width: {{ $percent }}%"
-                                aria-valuenow="{{ $percent }}" aria-valuemin="0"
-                                aria-valuemax="100">{{ $percent }}%</div>
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $percent }}%"
+                                aria-valuenow="{{ $percent }}" aria-valuemin="0" aria-valuemax="100">
+                                {{ $percent }}%</div>
                         </div>
                     </td>
                     <td width='200'>{{ $item->created_at }}</td>

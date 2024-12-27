@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('icon')->nullable();
             $table->string('color')->nullable();
 
-            $table->integer('users')->default(0);
+            $table->integer('users')->default(0); // 사용자 수
 
         });
     }

@@ -109,7 +109,7 @@ Route::middleware(['web','auth:sanctum', 'verified', 'admin'])
     ]);
 
     // 소셜 로그인 공급자
-    Route::get('oauth/users',[
+    Route::get('oauth/users/{provider?}',[
         \Jiny\Social\Http\Controllers\Admin\AdminOAuth::class,
         'index'
     ]);
@@ -117,6 +117,9 @@ Route::middleware(['web','auth:sanctum', 'verified', 'admin'])
     Route::get('social', [
         \Jiny\Social\Http\Controllers\SocialSettingController::class,
         "index"]);
+
+    //Route::resource('social', \Jiny\Users\Http\Controllers\Admin\SocialController::class);
+
 });
 
 
